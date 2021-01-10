@@ -7,8 +7,8 @@ Alexandre FORESTIER / Julie PICOT
 # WebSite startup and requirements
 
 * The file requirement.txt contains all the libraries required to run our website which runs on django (if you really want to run the ipynb you will also need plotly and seaborn)
-* To install all the required libraries type ``` pip install -r requirements.txt ``` in your terminal
-* To run the website with your current directory move your current dirrectory to WebSiteData and then simply copy paste this command:
+* To install all the required libraries set your current directory to the root of project and type ``` pip install -r requirements.txt ``` in your terminal
+* To run the website move your current dirrectory to /WebSiteData  ``` cd WebSiteData ``` and then simply copy paste this command:
 ``` python manage.py runserver ```
 * Head to [this link](http://127.0.0.1:8000/prediction/index/) and tadaaaaa :) 
 
