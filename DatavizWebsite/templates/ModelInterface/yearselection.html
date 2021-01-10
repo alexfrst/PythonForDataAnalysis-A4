@@ -1,0 +1,30 @@
+{% extends 'ModelInterface/base.html' %}
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Data exploration</h1>
+    <p class="lead">Access the thousands of companies's statement of income we've had to make our predictions <br> Those are sorted depending on the year we were folllowing us, chose your year </p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+  {% for value in values %}
+     <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">{{ value.name }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title"></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Access to a light version of data</li>
+          <li>See the state of the company</li>
+          <li>Have a look at it's variabes</li>
+        </ul>
+        <a type="button" class="w-100 btn btn-lg btn-outline-dark" href="../{{ value.url }}">Access</a>
+      </div>
+    </div>
+    </div>
+      {% endfor %}
+  </div>
+{% endblock %}

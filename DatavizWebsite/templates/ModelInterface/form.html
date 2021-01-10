@@ -1,0 +1,18 @@
+{% extends 'ModelInterface/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">New submission</h1>
+    <p class="lead">Give us the following informations to get your result</p>
+    <br>
+    <br>
+        <div class="container">
+            <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-dark btn-lg btn-block " type="submit">Submit my data</button>
+          </form>
+        </div>
+    </div>
+{% endblock %}
